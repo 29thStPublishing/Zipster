@@ -3,8 +3,10 @@ this app is a ziparchive (http://code.google.com/p/ziparchive/wiki/PageName) pro
 
 # things i did to a new project to get zipster to work
 
+0. Started a new project with one view
+
 1. Added the ZipArchive files
 
 2. added libz.1.1.3.dylib framework
 
-3. added things to the xib, 
+3. added things to the xib, followed the sample code for ziparchive in viewDidLoad, loaded the img file into the xib, and, voila, a rapping lady flipping the bird!
