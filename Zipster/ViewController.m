@@ -11,6 +11,16 @@
 
 #define FILENAME @"loneja_loka.jpg"
 
+// this is an OSX-created (right click on dir, archive) zip file.
+//#define ZIP_FILE @"lady_rappers.zip"
+//#define FOLDER_NAME "@lady_rappers"
+ 
+
+// this is the tools/create_zip.py -created zip file.
+#define ZIP_FILE @"new_lady_rappers.zip" 
+#define FOLDER_NAME @"new_lady_rappers"
+
+
 @implementation ViewController
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +57,7 @@
     NSLog(@"\n App directory = %@\n", appPath);
 
     
-    NSString * fullPath = [NSString stringWithFormat:@"%@/%@", appPath, @"lady_rappers.zip"];
+    NSString * fullPath = [NSString stringWithFormat:@"%@/%@", appPath, ZIP_FILE];
     
     
     NSLog(@"\n Full path = %@\n", fullPath);
@@ -62,7 +72,7 @@
             
             status.text = [NSString stringWithFormat:@"Package unzipped; here's the '%@' image.", FILENAME];
 
-            NSString * newPath = [NSString stringWithFormat:@"%@/lady_rappers/%@", documentsDirectory, FILENAME];
+            NSString * newPath = [NSString stringWithFormat:@"%@/%@/%@", documentsDirectory, FOLDER_NAME, FILENAME];
             NSLog(@"newPath, fullpath to new image, is: %@\n", newPath);
             
             imgView.image = [UIImage imageWithContentsOfFile:newPath];
